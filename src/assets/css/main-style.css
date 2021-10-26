@@ -1,0 +1,348 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+:root {
+    --theme-bg-blight: #fff;
+    --theme-font-bold: 600;
+    --theme-font-light: 400;
+    --theme-btn-bg: #29323d;
+    --theme-btn-color: #fff;
+    --theme-btn-font-size: 16px;
+    --theme-btn-bg-hover: #4c5e73;
+    --theme-btn-radius-1: 30px;
+    --theme-btn-radius-2: 4px;
+    --theme-btn-padding: 10px 30px;
+    --theme-nav-btn-font-size: 14px;
+    --theme-nav-btn-padding: 7px 20px;
+    --theme-heading-color: #3b4754;
+    --theme-nav-link-color: #3b4754;
+    --theme-nav-link-hover: #798da3;
+    --theme-text-color: #798da3;
+    --theme-link-color: #1180f1;
+    --theme-link-color-active: #1f4c7a;
+    --theme-link-color-visited: #798da3;
+    --theme-custom-radius: 4px;
+    --theme-bg-grey: #798da3;
+    --theme-bg-blue-grey: #f0f2ff;
+    --theme-custom-border: 1px solid #dee2e6;
+    --theme-custom-box-shadow: 0px 4px 8px rgb(75, 75, 75, 0.7);
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: var(--theme-bg-blight);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    --main-font: Nunito, sans-serif !important;
+    --responsive: calc((var(--min-font) * 1px) + (var(--max-font) - var(--min-font)) * ((100vw - 420px) / (1366 - 420)))
+}
+
+*,
+:after,
+:before {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit
+}
+
+span {
+    font-weight: 500;
+    color: #5d5d5d;
+    --max-font: 35;
+    --min-font: 20;
+    line-height: revert !important;
+    font-size: var(--responsive);
+    font-family: var(--main-font)
+}
+
+p {
+    color: var(--theme-text-color);
+    --max-font: 16;
+    --min-font: 16;
+    line-height: revert !important;
+    font-size: var(--responsive);
+    font-family: var(--main-font)
+}
+
+h1 {
+    font-weight: var( --theme-font-bold);
+    color: var(--theme-heading-color);
+    --max-font: 50;
+    --min-font: 22;
+    line-height: initial !important;
+    font-family: var(--main-font);
+    font-size: var(--responsive);
+}
+
+h2 {
+    font-weight: var( --theme-font-bold);
+    color: var(--theme-heading-color);
+    line-height: initial !important;
+    --max-font: 35;
+    --min-font: 20;
+    line-height: 40px;
+    font-family: var(--main-font);
+    font-size: var(--responsive);
+}
+
+h3 {
+    font-weight: var( --theme-font-bold);
+    color: var(--theme-heading-color);
+    line-height: initial !important;
+    --max-font: 25;
+    --min-font: 18;
+    font-family: var(--main-font);
+    font-size: var(--responsive);
+}
+
+h4 {
+    color: var(--theme-heading-color);
+    --max-font: 22;
+    --min-font: 20;
+    line-height: 23px;
+    font-family: var(--main-font);
+    font-size: var(--responsive);
+}
+
+h5 {
+    color: var(--theme-heading-color);
+    --max-font: 20;
+    --min-font: 18;
+    font-family: var(--main-font);
+    font-size: var(--responsive);
+}
+
+h6 {
+    color: var(--theme-heading-color);
+    --max-font: 16;
+    --min-font: 16;
+    font-family: var(--main-font);
+    font-size: var(--responsive);
+}
+
+@media (min-width:1366px) {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+        font-size: calc(var(--max-font) * 1px)
+    }
+}
+
+@media (max-width:420px) {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+        font-size: calc(var(--min-font) * 1px)
+    }
+}
+
+#wrapper {
+    overflow: hidden;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+}
+
+@media (max-width: 576px){
+    .btn-hol{
+      flex-direction: column;
+    }
+    a.btn{
+      width: 100%;
+      margin-left: 0px !important;
+    }
+}
+
+/* form styles */
+form .input-group .form-control:focus {
+	color: #292929 !important;
+	border-color: #3b6ef8 !important;
+	outline: 0;
+	-webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.1) !important;
+	-moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.1) !important;
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0.1) !important;
+}
+
+form .input-group .form-control:not(:valid) {
+	background-color: transparent !important;
+}
+
+form .input-group input[type="text"]::-webkit-input-placeholder {
+	color: #9fafc1 !important;
+	font-size: 12px;
+	font-weight: 500;
+    vertical-align: middle;
+    line-height: normal;
+    transform: translateY(-3px);
+}
+
+form .input-group input[type="text"]:-ms-input-placeholder {
+	color: #9fafc1 !important;
+	font-size: 12px;
+	font-weight: 500;
+    vertical-align: middle;
+    line-height: normal;
+    transform: translateY(-3px);
+}
+
+form .input-group input[type="text"]::-moz-placeholder {
+	color: #9fafc1 !important;
+	font-size: 12px;
+	font-weight: 500;
+	opacity: 1;
+    vertical-align: middle;
+    line-height: normal;
+        transform: translateY(-3px);
+}
+
+form .input-group input[type="text"]:-moz-placeholder {
+	color: #9fafc1 !important;
+	font-size: 12px;
+	font-weight: 500;
+	opacity: 1;
+    vertical-align: middle;
+    line-height: normal;
+        transform: translateY(-3px);
+}
+
+form .input-group input[type="tel"]::-webkit-input-placeholder {
+	color: #9fafc1 !important;
+	font-size: 12px;
+	font-weight: 500;
+    vertical-align: middle;
+    line-height: normal;
+        transform: translateY(-3px);
+}
+
+form .input-group input[type="tel"]:-ms-input-placeholder {
+	color: #9fafc1 !important;
+	font-size: 12px;
+	font-weight: 500;
+    vertical-align: middle;
+    line-height: normal;
+        transform: translateY(-3px);
+}
+
+form .input-group input[type="tel"]::-moz-placeholder {
+	color: #9fafc1 !important;
+	font-size: 12px;
+	font-weight: 500;
+	opacity: 1;
+    vertical-align: middle;
+    line-height: normal;
+        transform: translateY(-3px);
+}
+
+form .input-group input[type="tel"]:-moz-placeholder {
+	color: #9fafc1 !important;
+	font-size: 12px;
+	font-weight: 500;
+	opacity: 1;
+    vertical-align: middle;
+    line-height: normal;
+        transform: translateY(-3px);
+}
+
+form .input-group input[type="password"]::-webkit-input-placeholder {
+	color: #9fafc1 !important;
+	font-size: 12px;
+	font-weight: 500;
+    vertical-align: middle;
+    line-height: normal;
+        transform: translateY(-3px);
+}
+
+form .input-group input[type="password"]:-ms-input-placeholder {
+	color: #9fafc1 !important;
+	font-size: 12px;
+	font-weight: 500;
+    vertical-align: middle;
+    line-height: normal;
+        transform: translateY(-3px);
+}
+
+form .input-group input[type="password"]::-moz-placeholder {
+	color: #9fafc1 !important;
+	font-size: 12px;
+	font-weight: 500;
+	opacity: 1;
+    vertical-align: middle;
+    line-height: normal;
+        transform: translateY(-3px);
+}
+
+form .input-group input[type="password"]:-moz-placeholder {
+	color: #9fafc1 !important;
+	font-size: 12px;
+	font-weight: 500;
+	opacity: 1;
+    vertical-align: middle;
+    line-height: normal;
+        transform: translateY(-3px);
+}
+
+form .input-group input[type="email"]::-webkit-input-placeholder {
+	color: #9fafc1 !important;
+	font-size: 12px;
+	font-weight: 500;
+    vertical-align: middle;
+    line-height: normal;
+        transform: translateY(-3px);
+}
+
+form .input-group input[type="email"]:-ms-input-placeholder {
+	color: #9fafc1 !important;
+	font-size: 12px;
+	font-weight: 500;
+    vertical-align: middle;
+    line-height: normal;
+        transform: translateY(-3px);
+}
+
+form .input-group input[type="email"]::-moz-placeholder {
+	color: #9fafc1 !important;
+	font-size: 12px;
+	font-weight: 700;
+	opacity: 1;
+        vertical-align: middle;
+        line-height: normal;
+            transform: translateY(-3px);
+}
+
+form .input-group input[type="email"]:-moz-placeholder {
+	color: #9fafc1 !important;
+	font-size: 12px;
+	font-weight: 700;
+	opacity: 1;
+        vertical-align: middle;
+        line-height: normal;
+            transform: translateY(-3px);
+}
